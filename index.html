@@ -2,40 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>squdy</title>
     <style>
+        /* Базовые настройки страницы: черный фон, белый текст */
         body {
-            background-color: #000;
-            color: #fff;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 40px;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            /* Растягиваем по горизонтали (x) в 1.5 раза, по вертикали оставляем 1 */
-            transform: scale(1.5, 1); 
-            transform-origin: top left;
-            width: 60%; 
+            padding: 60px 80px; /* Отступы от краев экрана */
+            overflow-x: hidden;
         }
-        h1 {
-            font-size: 8rem;
-            margin: 0 0 20px 0;
-            text-transform: lowercase;
-            letter-spacing: -5px; /* Немного сдвигаем буквы для плотности */
+
+        /* Настройки экстремально вытянутого заголовка */
+        .hero-title {
+            font-size: 160px;
+            font-weight: 400;
+            margin: 0 0 200px 0; /* Большой отступ снизу из-за масштабирования */
+            transform: scale(0.45, 3.5); /* Сжимаем ширину, увеличиваем высоту в 3.5 раза */
+            transform-origin: left top;
+            letter-spacing: -2px;
         }
-        p {
-            font-size: 1.5rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 300;
+
+        /* Настройки основного текста */
+        .content {
+            font-size: 26px; /* Крупный размер шрифта */
+            font-weight: bold; /* Жирное начертание как на референсе */
+            line-height: 1.25;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
 
-    <h1>squdy</h1>
-    <p>squdy is a beginner musician. this project is their way of learning how sound works — synthesis, mixing, structure, and building tracks from scratch. they don't use loops or presets. everything is made manually — from drum patterns to atmospheres.</p>
-    <p>for now, it's more of a demonstration of what they've learned through working on themselves. released so far: a mixtape pluto (2026), and the album kenoopsia is on its way. both projects are not about genre — they're about finding their own sound and learning to express a state of mind through music.</p>
-    <p>squdy is doing this to grow. nothing more.</p>
-    <p>squdy is non-binary and a proud member of the LGBTQ+</p>
+    <h1 class="hero-title">squdy</h1>
+
+    <div class="content">
+        squdy is a beginner musician. this project is their way<br>
+        of learning how sound works — synthesis, mixing,<br>
+        structure, and building tracks from scratch. they don't<br>
+        use loops or presets. everything is made manually —<br>
+        from drum patterns to atmospheres.<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;for now, it's more of a demonstration of what they've<br>
+        learned through working on themselves. released so<br>
+        far: a mixtape pluto (2026), and the album kenoopsia<br>
+        is on its way. both projects are not about genre —<br>
+        they're about finding their own sound and learning to<br>
+        express a state of mind through music.<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;squdy is doing this to grow. nothing more.<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;squdy is non-binary and a proud member of the<br>
+        LGBTQ+
+    </div>
 
 </body>
 </html>
