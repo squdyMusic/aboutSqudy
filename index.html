@@ -7,15 +7,36 @@
         body {
             background-color: #000;
             color: #fff;
+            margin: 0;
+            padding: 50px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: monospace;
+            justify-content: flex-start; /* Текст слева */
+        }
+        .container {
+            max-width: 450px; /* Сжимает ширину текста, создавая эффект «сплюснутости» */
+        }
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px; /* Еще больше сжимает текст */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.2; /* Маленькое расстояние между строками для плотности */
+            font-weight: 500;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>TRANSFORMATION IN PROGRESS</h1>
+
+<div class="container">
+    <h1>John Holloway</h1>
+    <p>Работая на стыке звука, перформанса и технологий, я превращаю хаос в искусство. Моя практика бросает вызов привычным идеям авторства и трансформации, размывая границы между физическим и цифровым.</p>
+    <p>Мой путь — это постоянная эволюция. Приглашаю тебя в пространство, где музыка становится инструментом самопознания и выхода за пределы установленных форм.</p>
+</div>
+
 </body>
 </html>
