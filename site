@@ -8,36 +8,39 @@
             background-color: #000;
             color: #fff;
             margin: 0;
-            padding: 50px;
+            padding: 60px;
             font-family: 'Helvetica', 'Arial', sans-serif;
             display: flex;
             justify-content: flex-start;
         }
         .container {
-            max-width: 450px; 
+            /* Сплющиваем весь блок: ширина 60% от оригинала, высота 100% */
+            transform: scale(0.6, 1);
+            transform-origin: left;
+            max-width: 1000px;
         }
         h1 {
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
+            font-size: 4rem;
+            margin-bottom: 30px;
             text-transform: uppercase;
+            letter-spacing: -2px;
         }
         p {
-            font-size: 1.1rem;
-            line-height: 1.2;
+            font-size: 1.5rem;
+            line-height: 1.3;
+            margin-bottom: 25px;
             font-weight: 500;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>squdy</h1>
+    <h1>SQUDY</h1>
     <p>squdy is a beginner musician. this project is their way of learning how sound works — synthesis, mixing, structure, and building tracks from scratch. they don't use loops or presets. everything is made manually — from drum patterns to atmospheres.</p>
     <p>for now, it's more of a demonstration of what they've learned through working on themselves. released so far: a mixtape pluto (2026), and the album kenoopsia is on its way. both projects are not about genre — they're about finding their own sound and learning to express a state of mind through music.</p>
     <p>squdy is doing this to grow. nothing more.</p>
-    <p>squdy is non-binary.</p>
+    <p>squdy is non-binary and a proud member of the LGBTQ+ community.</p>
 </div>
 
 </body>
