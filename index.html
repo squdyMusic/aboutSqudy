@@ -5,57 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>squdy</title>
     <style>
-        /* Базовые настройки страницы: черный фон, белый текст */
+        /* Базовые настройки страницы */
         body {
             background-color: #000000;
             color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 60px 80px; /* Отступы от краев экрана */
+            padding: 0;
             overflow-x: hidden;
         }
 
-        /* Настройки экстремально вытянутого заголовка */
+        /* Основной контейнер с отступами */
+        .container {
+            position: relative;
+            padding: 120px 50px; /* Отступ слева 50px */
+        }
+
+        /* Искаженный заголовок, наложенный поверх текста */
         .hero-title {
-            font-size: 160px;
+            position: absolute;
+            top: 40px; /* Выступает выше основного текста */
+            left: 52px; /* Выравнивание по левому краю с текстом */
+            font-size: 130px;
             font-weight: 400;
-            margin: 0 0 200px 0; /* Большой отступ снизу из-за масштабирования */
-            transform: scale(0.45, 3.5); /* Сжимаем ширину, увеличиваем высоту в 3.5 раза */
+            margin: 0;
+            
+            /* Экстремально сжимаем по ширине и вытягиваем в высоту */
+            transform: scale(0.15, 6); 
             transform-origin: left top;
             letter-spacing: -2px;
+            
+            z-index: 10; /* Поверх текста */
+            pointer-events: none; /* Чтобы текст под заголовком можно было выделить */
         }
 
         /* Настройки основного текста */
         .content {
-            font-size: 26px; /* Крупный размер шрифта */
-            font-weight: bold; /* Жирное начертание как на референсе */
-            line-height: 1.25;
-            letter-spacing: 0.5px;
+            position: relative;
+            font-size: 24px; 
+            font-weight: normal; /* Обычный шрифт, без жирности */
+            line-height: 1.35;
+            
+            /* Вытягиваем текст по горизонтали */
+            transform: scaleX(1.15); 
+            transform-origin: left top; /* Растяжение идет слева направо, край остается ровным */
+            
+            z-index: 1;
+        }
+        
+        .content p {
+            margin: 0 0 25px 0;
         }
     </style>
 </head>
 <body>
 
-    <h1 class="hero-title">squdy</h1>
+    <div class="container">
+        <!-- Заголовок -->
+        <h1 class="hero-title">squdy</h1>
 
-    <div class="content">
-        squdy is a beginner musician. this project is their way<br>
-        of learning how sound works — synthesis, mixing,<br>
-        structure, and building tracks from scratch. they don't<br>
-        use loops or presets. everything is made manually —<br>
-        from drum patterns to atmospheres.<br>
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;for now, it's more of a demonstration of what they've<br>
-        learned through working on themselves. released so<br>
-        far: a mixtape pluto (2026), and the album kenoopsia<br>
-        is on its way. both projects are not about genre —<br>
-        they're about finding their own sound and learning to<br>
-        express a state of mind through music.<br>
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;squdy is doing this to grow. nothing more.<br>
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;squdy is non-binary and a proud member of the<br>
-        LGBTQ+
+        <!-- Основной текст -->
+        <div class="content">
+            <p>squdy is a beginner musician. this project is their way<br>
+            of learning how sound works — synthesis, mixing,<br>
+            structure, and building tracks from scratch. they don't<br>
+            use loops or presets. everything is made manually —<br>
+            from drum patterns to atmospheres.</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;for now, it's more of a demonstration of what they've<br>
+            learned through working on themselves. released so<br>
+            far: a mixtape pluto (2026), and the album kenoopsia<br>
+            is on its way. both projects are not about genre —<br>
+            they're about finding their own sound and learning to<br>
+            express a state of mind through music.</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;squdy is doing this to grow. nothing more.</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;squdy is non-binary and a proud member of the<br>
+            LGBTQ+</p>
+        </div>
     </div>
 
 </body>
